@@ -26,9 +26,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative; /* For dropdown positioning */
         }
         nav {
             display: flex;
+            align-items: center;
         }
         nav a {
             color: #fff;
@@ -37,9 +39,36 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: background-color 0.3s;
+            position: relative; /* For dropdown positioning */
         }
         nav a:hover {
             background-color: #0059b3;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004080;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #0059b3;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             flex: 1; /* Allow container to grow and shrink */
@@ -90,8 +119,16 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="projects.html">Projects</a>
+            <a href="research.html">Current Research</a>
+            <div class="dropdown">
+                <a href="projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="project1.html">Project 1</a>
+                    <a href="project2.html">Project 2</a>
+                    <a href="project3.html">Project 3</a>
+                    <!-- Add more project links as needed -->
+                </div>
+            </div>
             <a href="contact.html">Contact</a>
         </nav>
     </header>

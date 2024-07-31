@@ -17,11 +17,6 @@
             box-sizing: border-box;
             background-color: #f0f4f8;
             color: #333;
-            opacity: 0; /* Start with the body hidden */
-            transition: opacity 1s ease-in; /* Fade-in transition */
-        }
-        body.fade-in {
-            opacity: 1; /* Show the body */
         }
         header {
             background: linear-gradient(to bottom, #004080, #004080 90%, #f0f4f8 100%);
@@ -30,9 +25,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative; /* For dropdown positioning */
         }
         nav {
             display: flex;
+            align-items: center;
         }
         nav a {
             color: #fff;
@@ -41,9 +38,34 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: background-color 0.3s;
+            position: relative; /* For dropdown positioning */
         }
         nav a:hover {
             background-color: #0059b3;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004080;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #0059b3;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             max-width: 1200px;
@@ -76,6 +98,13 @@
         }
         .project-item:hover {
             transform: scale(1.05);
+        }
+        .project-item img {
+            width: 100%;
+            height: 150px; /* Fixed height for images */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 8px 8px 0 0; /* Rounded top corners */
+            margin-bottom: 1rem; /* Space below the image */
         }
         .project-item h2 {
             color: #004080;
@@ -119,8 +148,16 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="projects.html">Projects</a>
+            <a href="research.html">Current Research</a>
+            <div class="dropdown">
+                <a href="projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="project1.html">Project 1</a>
+                    <a href="project2.html">Project 2</a>
+                    <a href="project3.html">Project 3</a>
+                    <!-- Add more project links as needed -->
+                </div>
+            </div>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
@@ -131,17 +168,38 @@
         </div>
         <div class="projects">
             <div class="project-item">
-                <h2>Project Title 1</h2>
+                <img src="mix-dtu.png" alt="Mix-DTU Image">
+                <h2>Miniature XRF for Delicate Terrain Understanding (MIX-DTU)</h2>
                 <p>A brief description of the project, highlighting its main features and significance.</p>
                 <a href="project1.html">Learn More</a>
             </div>
             <div class="project-item">
-                <h2>Project Title 2</h2>
+                <img src="project2.jpg" alt="Project 2 Image">
+                <h2>Beater B. Barker</h2>
                 <p>A brief description of the project, highlighting its main features and significance.</p>
                 <a href="project2.html">Learn More</a>
             </div>
             <div class="project-item">
-                <h2>Project Title 3</h2>
+                <img src="project3.jpg" alt="Project 3 Image">
+                <h2>Okie's Stir Fry</h2>
+                <p>A brief description of the project, highlighting its main features and significance.</p>
+                <a href="project3.html">Learn More</a>
+            </div>
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3 Image">
+                <h2>The Angry Bird</h2>
+                <p>A brief description of the project, highlighting its main features and significance.</p>
+                <a href="project3.html">Learn More</a>
+            </div>
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3 Image">
+                <h2>Internal Combustion Engines</h2>
+                <p>A brief description of the project, highlighting its main features and significance.</p>
+                <a href="project3.html">Learn More</a>
+            </div>
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3 Image">
+                <h2>Water Pump</h2>
                 <p>A brief description of the project, highlighting its main features and significance.</p>
                 <a href="project3.html">Learn More</a>
             </div>

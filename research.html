@@ -17,11 +17,6 @@
             box-sizing: border-box;
             background-color: #f0f4f8;
             color: #333;
-            opacity: 0; /* Start with the body hidden */
-            transition: opacity 1s ease-in; /* Fade-in transition */
-        }
-        body.fade-in {
-            opacity: 1; /* Show the body */
         }
         header {
             background: linear-gradient(to bottom, #004080, #004080 90%, #f0f4f8 100%);
@@ -30,9 +25,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative; /* For dropdown positioning */
         }
         nav {
             display: flex;
+            align-items: center;
         }
         nav a {
             color: #fff;
@@ -41,9 +38,36 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: background-color 0.3s;
+            position: relative; /* For dropdown positioning */
         }
         nav a:hover {
             background-color: #0059b3;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004080;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #0059b3;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             max-width: 1200px;
@@ -113,27 +137,52 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="projects.html">Projects</a>
+            <a href="research.html">Current Research</a>
+            <div class="dropdown">
+                <a href="projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="project1.html">Project 1</a>
+                    <a href="project2.html">Project 2</a>
+                    <a href="project3.html">Project 3</a>
+                    <!-- Add more project links as needed -->
+                </div>
+            </div>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     <div class="container">
         <div class="hero">
-            <h1>Research Project Title</h1>
-            <p>A brief overview of the research project, summarizing its main goals and significance.</p>
+            <h1>Starlift</h1>
+            <p>A hypothetical network of spacecraft that provide intercept, servicing, and provisioning capabilities throughout cislunar space.</p>
+            <img src="starlift image.png" alt="Starlift Image" style="max-width: 50%; height: auto; margin-top: 20px;">
         </div>
         <div class="project-details">
             <div class="project-item">
                 <h2>Project Overview</h2>
+                <p>Starlift is a proposed logistics network in cislunar space. (more about Starlift in general)</p>
                 <p>Detailed description of the research project, including the objectives, methodologies, and expected outcomes. This section can provide a comprehensive explanation of the research scope, the problem being addressed, and the innovative approaches being utilized.</p>
             </div>
             <div class="project-item">
-                <h2>Research Methodology</h2>
+                <h2>My Focus</h2>
+                <p>The research I have participated in focuses on designing orbits in cislunar space using various models, for example, the circular restricted
+                    three-body model or a full force model that defines the Earth as a central body with the Sun and the Moon as perturbers.
+                    Other celestial bodies, such as Jupiter, can be easily added to the full force model. A library of initial conditions has been formulated
+                    from other research, and these initial conditions can be used in either model to generate an orbit.</p>
+                <p>(talk about the math?)</p>
+                <p>(talk about the reason we're doing this)</p>
+                <p>(add gifs)</p>
                 <p>Description of the research methods and techniques used in the project. This can include information about data collection, analysis, modeling, simulations, experiments, and any other relevant methodologies.</p>
             </div>
             <div class="project-item">
-                <h2>Key Findings and Results</h2>
+                <h2>The Circular Restricted Three-Body Problem</h2>
+                <p>Summary of the key findings, results, and contributions of the research. Highlight any significant discoveries, achievements, or impacts of the project.</p>
+            </div>
+            <div class="project-item">
+                <h2>The Full Force Model</h2>
+                <p>Summary of the key findings, results, and contributions of the research. Highlight any significant discoveries, achievements, or impacts of the project.</p>
+            </div>
+            <div class="project-item">
+                <h2>GMAT Validation</h2>
                 <p>Summary of the key findings, results, and contributions of the research. Highlight any significant discoveries, achievements, or impacts of the project.</p>
             </div>
             <div class="project-item">
@@ -141,11 +190,12 @@
                 <p>Discussion of potential future directions for the research, including any planned extensions, collaborations, or applications. This section can also address any open questions or challenges that remain.</p>
             </div>
             <div class="project-item">
-                <h2>Contact Information</h2>
-                <p>If you would like to know more about this research project or discuss potential collaborations, please feel free to contact me.</p>
-                <div class="tags">
-                    <span>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></span>
-                </div>
+                <h2>References and Further Reading</h2>
+                <ul>
+                    <li><a href="project_narrative.pdf" target="_blank">Starlift: Logistics Networks for Persistent, Ensured Superiority in Cislunar Space</a></li>
+                    <li><a href="references_cited.pdf" target="_blank">Starlift Project Narrative References Cited</a></li>
+                    <!-- Add more references as needed -->
+                </ul>
             </div>
         </div>
     </div>
