@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project - Anna Boese</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            background-color: #f0f4f8;
+            color: #333;
+            opacity: 0; /* Start with the body hidden */
+            transition: opacity 1s ease-in; /* Fade-in transition */
+        }
+        body.fade-in {
+            opacity: 1; /* Show the body */
+        }
+        header {
+            background: linear-gradient(to bottom, #004080, #004080 90%, #f0f4f8 100%);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #0059b3;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #004080;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project-details {
+            margin: 2rem 0;
+        }
+        .project-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .project-item h2 {
+            color: #004080;
+            margin-top: 0;
+        }
+        .project-item p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .project-item .tags {
+            margin-top: 1rem;
+        }
+        .project-item .tags span {
+            background-color: #004080;
+            color: #fff;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            margin-right: 0.5rem;
+            font-size: 0.875rem;
+        }
+        footer {
+            background: linear-gradient(to top, #004080, #004080 90%, #f0f4f8 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Anna Boese</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>Research Project Title</h1>
+            <p>A brief overview of the research project, summarizing its main goals and significance.</p>
+        </div>
+        <div class="project-details">
+            <div class="project-item">
+                <h2>Project Overview</h2>
+                <p>Detailed description of the research project, including the objectives, methodologies, and expected outcomes. This section can provide a comprehensive explanation of the research scope, the problem being addressed, and the innovative approaches being utilized.</p>
+            </div>
+            <div class="project-item">
+                <h2>Research Methodology</h2>
+                <p>Description of the research methods and techniques used in the project. This can include information about data collection, analysis, modeling, simulations, experiments, and any other relevant methodologies.</p>
+            </div>
+            <div class="project-item">
+                <h2>Key Findings and Results</h2>
+                <p>Summary of the key findings, results, and contributions of the research. Highlight any significant discoveries, achievements, or impacts of the project.</p>
+            </div>
+            <div class="project-item">
+                <h2>Future Work</h2>
+                <p>Discussion of potential future directions for the research, including any planned extensions, collaborations, or applications. This section can also address any open questions or challenges that remain.</p>
+            </div>
+            <div class="project-item">
+                <h2>Contact Information</h2>
+                <p>If you would like to know more about this research project or discuss potential collaborations, please feel free to contact me.</p>
+                <div class="tags">
+                    <span>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Anna Boese. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade-in effect for body
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Anna Boese</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            background-color: #f0f4f8;
+            color: #333;
+            opacity: 0; /* Start with the body hidden */
+            transition: opacity 1s ease-in; /* Fade-in transition */
+        }
+        body.fade-in {
+            opacity: 1; /* Show the body */
+        }
+        header {
+            background: linear-gradient(to bottom, #004080, #004080 90%, #f0f4f8 100%);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #0059b3;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #004080;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .project-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            width: calc(33% - 2rem); /* Adjust the number of columns */
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+        .project-item h2 {
+            color: #004080;
+            margin-top: 0;
+        }
+        .project-item p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .project-item a {
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+            border: 2px solid #004080;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .project-item a:hover {
+            background-color: #004080;
+            color: #fff;
+        }
+        footer {
+            background: linear-gradient(to top, #004080, #004080 90%, #f0f4f8 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Anna Boese</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>Projects</h1>
+            <p>Explore the projects I've worked on. Click on each project to learn more.</p>
+        </div>
+        <div class="projects">
+            <div class="project-item">
+                <h2>Project Title 1</h2>
+                <p>A brief description of the project, highlighting its main features and significance.</p>
+                <a href="project1.html">Learn More</a>
+            </div>
+            <div class="project-item">
+                <h2>Project Title 2</h2>
+                <p>A brief description of the project, highlighting its main features and significance.</p>
+                <a href="project2.html">Learn More</a>
+            </div>
+            <div class="project-item">
+                <h2>Project Title 3</h2>
+                <p>A brief description of the project, highlighting its main features and significance.</p>
+                <a href="project3.html">Learn More</a>
+            </div>
+            <!-- Add more project-item divs as needed -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Anna Boese. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade-in effect for body
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>
